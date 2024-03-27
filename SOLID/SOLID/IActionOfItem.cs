@@ -12,8 +12,8 @@ namespace SOLID
         int Weight { get; }
         int Healpoints { get; }
         int Damagepoints { get; }
-        int GetDamage();
-        int GetHeal();
+        int GetDamage(int damagepoints);
+        int GetHeal(int healpoints);
 
 
 
