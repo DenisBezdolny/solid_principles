@@ -10,19 +10,32 @@ namespace SOLID
     public class NPC : IActionOfItem
     {
         private string _name;
-        public int Hitpoints {  get; }
+        public int Hitpoints {  get; set; }
 
-        public int Weight { get; }
+        public int Weight { get; set; }
 
-        public int Healpoints { get; }
+        public int Healpoints { get; set; }
 
-        public int Damagepoints { get; }
+        public int Damagepoints { get; set; }
 
-        public NPC (string _name)
+        public NPC (string name)
         {
-            _name = "Karl";
+            _name = name;
         }
 
         public string Name => _name;
+
+        public int GetDamage(int damagepoints)
+        {
+            Hitpoints = Hitpoints - damagepoints;
+
+            if (Hitpoints > 0) { return Hitpoints; }
+            else { return Hitpoints = 0; }
+        }
+
+        public int GetHeal(int healpoints)
+        {
+            return Hitpoints = Hitpoints + healpoints;
+        }
     }
 }
