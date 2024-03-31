@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLID
+namespace SOLID_Right_ISP_
 {
-    public interface IActionOfItem
+    internal interface IItemsForHealing
     {
-        int Hitpoints { get; }
-        int Weight { get; }
-
-
-       
+        public int Healpoints { get; set; }
     }
 }
