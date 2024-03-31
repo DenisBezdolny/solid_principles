@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOLID_Right_ISP_;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SOLID
 {
-    public class HealItem : IActionOfItem
+    public class HealItem : IActionOfItem,IItemsForHealing
     {
         private string _name;
         public int Hitpoints {  get; set; }
@@ -16,26 +17,12 @@ namespace SOLID
 
         public int Healpoints { get; set; }
 
-        public int Damagepoints { get; set; }
-
         public HealItem (string _name)
         {
-            _name = "Karl";
+            _name = "Bandage";
         }
 
         public string Name => _name;
 
-        public int GetDamage(int damagepoints)
-        {
-            Hitpoints = Hitpoints-damagepoints;
-
-            if (Hitpoints > 0) { return Hitpoints; }
-            else { return Hitpoints = 0; }
-        }
-
-        public int GetHeal(int healpoints)
-        {
-            return Hitpoints = Hitpoints + healpoints;
-        }
     }
 }

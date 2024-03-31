@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOLID_Right_ISP_;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,18 @@ using System.Threading.Tasks;
 
 namespace SOLID
 {
-    public class Item : IActionOfItem
+    public class Item : IActionOfItem, IDamaging
     {
         private string _name;
         public int Hitpoints { get; set; }
 
         public int Weight { get; set; }
 
-        public int Healpoints { get; set; }
-
         public int Damagepoints { get; set; }
 
         public Item(string _name)
         {
-            _name = "Karl";
+            _name = "Chair";
         }
 
         public string Name => _name;
@@ -32,9 +31,5 @@ namespace SOLID
             else { return Hitpoints = 0; }
         }
 
-        public int GetHeal(int healpoints)
-        {
-            return Hitpoints = Hitpoints + healpoints;
-        }
     }
 }

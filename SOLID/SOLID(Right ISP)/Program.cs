@@ -10,7 +10,7 @@
             {
                 Hitpoints = 50,
                 Weight = 60,
-                Healpoints = 0,
+                //cut Healpoints
                 Damagepoints = 1
 
             };
@@ -19,7 +19,7 @@
             {
                 Hitpoints = 5,
                 Weight = 2,
-                Healpoints = 0,
+                //cut Healpoints
                 Damagepoints = 0
             };
 
@@ -27,7 +27,7 @@
             {
                 Hitpoints = 3,
                 Weight = 1,
-                Healpoints = 0,
+                //cut Healpoints
                 Damagepoints = 15
             };
 
@@ -36,7 +36,6 @@
                 Hitpoints = 10,
                 Weight = 2,
                 Healpoints = 15,
-                Damagepoints = 0
             };
 
             Console.WriteLine(Pupa.Name) ;
